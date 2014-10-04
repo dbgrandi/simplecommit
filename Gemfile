@@ -40,3 +40,5 @@ gem 'rails_12factor'
 gem 'unicorn'
 
 gem 'slim-rails'
+
+gem "omniauth-github", '1.1.1'
