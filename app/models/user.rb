@@ -1,4 +1,7 @@
 class User < ActiveRecord::Base
+  def is_admin?
+    nickname == 'dbgrandi'
+  end
  
   def self.create_with_omniauth(auth)
     create! do |user|
