@@ -1,2 +1,6 @@
-h1 Home#index
-p Find me in app/views/home/index.html.slim
+- if current_user
+  h1
+    = "Welcome #{current_user.name}"
+- else
+  h1
+    = link_to "Sign in with Github", "/auth/github"
