@@ -5,6 +5,9 @@ class User < ActiveRecord::Base
       user.provider = auth["provider"]
       user.uid = auth["uid"]
       user.name = auth["info"]["name"]
+      user.access_token = auth['credentials']['token']
+      user.nickname = auth['info']['nickname']
+      user.image = auth['info']['image']
     end
   end
 end
