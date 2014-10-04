@@ -1,3 +1,4 @@
+config/heroku_env.rb
 *.rbc
 capybara-*.html
 .rspec
