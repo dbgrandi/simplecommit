@@ -1,5 +1,6 @@
 class User < ActiveRecord::Base
-  has_many :projects
+  has_many :collaborators
+  has_many :projects, :through => :collaborators
   
   def is_admin?
     nickname == 'dbgrandi'

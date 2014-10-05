@@ -11,10 +11,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141004223049) do
+ActiveRecord::Schema.define(version: 20141005010759) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "collaborators", force: true do |t|
+    t.integer  "user_id"
+    t.integer  "project_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "collaborators", ["project_id"], name: "index_collaborators_on_project_id", using: :btree
+  add_index "collaborators", ["user_id"], name: "index_collaborators_on_user_id", using: :btree
 
   create_table "issues", force: true do |t|
     t.integer  "number"
@@ -25,14 +35,20 @@ ActiveRecord::Schema.define(version: 20141004223049) do
     t.string   "url"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "project_id"
   end
+
+  add_index "issues", ["project_id"], name: "index_issues_on_project_id", using: :btree
 
   create_table "labels", force: true do |t|
     t.string   "color"
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "project_id"
   end
+
+  add_index "labels", ["project_id"], name: "index_labels_on_project_id", using: :btree
 
   create_table "projects", force: true do |t|
     t.string   "url"
@@ -41,6 +57,16 @@ ActiveRecord::Schema.define(version: 20141004223049) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "taggings", force: true do |t|
+    t.integer  "issue_id"
+    t.integer  "label_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "taggings", ["issue_id"], name: "index_taggings_on_issue_id", using: :btree
+  add_index "taggings", ["label_id"], name: "index_taggings_on_label_id", using: :btree
 
   create_table "users", force: true do |t|
     t.string   "provider"
