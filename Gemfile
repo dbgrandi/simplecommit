@@ -55,7 +55,7 @@ end
 
 group :test do
   # gem 'autotest'
-  # gem 'database_cleaner' , '0.6.7'
+  gem 'database_cleaner' , '0.6.7'
 
   # add some visual noise to os x
   # gem 'growl'            , '1.0.3'
