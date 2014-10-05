@@ -65,6 +65,8 @@ group :test do
   # gem 'guard-rails'
   # gem 'guard-resque'
 
+  gem 'database_cleaner'
+
   # mocks and fake data
   gem 'fabrication'
   gem 'faker'
