@@ -2,6 +2,8 @@ class User < ActiveRecord::Base
   has_many :collaborators
   has_many :projects, :through => :collaborators
   
+  validates_uniqueness_of :uid
+  
   def is_admin?
     nickname == 'dbgrandi'
   end

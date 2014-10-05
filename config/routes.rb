@@ -7,6 +7,16 @@ Rails.application.routes.draw do
   get "/auth/:provider/callback" => "sessions#create"
   get "/signout" => "sessions#destroy", :as => :signout
 
+  #
+  # View resque UI
+  #
+  require 'resque/server'
+  Resque::Server.use Rack::Auth::Basic do |username, password|
+    username == 'admin'
+    password == 'hfea29a'
+  end
+  mount Resque::Server.new, :at => "/resque"
+  
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

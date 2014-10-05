@@ -42,3 +42,52 @@ gem 'unicorn'
 gem 'slim-rails'
 
 gem "omniauth-github", '1.1.1'
+
+gem 'resque'
+
+gem 'octokit'
+
+group :development, :test do
+  # gem 'guard'
+  gem 'rspec-rails'      , '~> 2.8.0'
+end
+
+
+group :test do
+  # gem 'autotest'
+  # gem 'database_cleaner' , '0.6.7'
+
+  # add some visual noise to os x
+  # gem 'growl'            , '1.0.3'
+
+  # if we optionally require it, it breaks on heroku. awesome
+  # gem 'rb-fsevent', :require => false if RUBY_PLATFORM =~ /darwin/i
+  # gem 'rb-fsevent'
+
+  # gem 'guard-livereload'
+  # gem 'guard-rspec'
+  # gem 'guard-rails'
+  # gem 'guard-resque'
+
+  # starts up a forking rspec server for much faster testing
+  # gem 'spork'            , '~> 0.9.0.rc8'
+  # gem 'guard-spork'      , '~> 0.3.1'
+
+  # mocks and fake data
+  # gem 'fabrication'      , '~> 2.0.2'
+  # gem 'faker'
+  
+  # test DSLs
+  # gem 'shoulda-matchers' , '~> 1.0.0'
+  # gem 'capybara'
+
+  # Pretty printed test output  
+  # gem 'turn'             , :require => false
+  
+#  gem 'vcr'
+#  gem 'webmock'          , '~> 1.7.6'
+#  gem 'crack'            , '>=0.1.7'
+
+  # test coverage
+  # gem 'simplecov', :require => false
+end
