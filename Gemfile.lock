@@ -235,7 +235,6 @@ DEPENDENCIES
   pg
   rails (= 4.1.6)
   rails_12factor
-  rb-fsevent
   resque
   rspec-rails
   sass-rails (~> 4.0.3)
