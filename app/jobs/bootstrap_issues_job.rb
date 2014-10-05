@@ -13,10 +13,12 @@ class BootstrapIssuesJob
     issues.each do |issue|
       i = Issue.new
       i.number = issue.number
+      i.url = issue.html_url
       i.state = issue.state
       i.title = issue.title
       i.body = issue.body
       i.opened_at = issue.created_at
+      i.last_updated_at = issue.updated_at
       i.project = project
       i.labels << label
       i.save

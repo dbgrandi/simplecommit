@@ -29,6 +29,10 @@ GEM
       tzinfo (~> 1.1)
     addressable (2.3.6)
     arel (5.0.1.20140414130214)
+    autoprefixer-rails (3.1.0.20140911)
+      execjs
+    bootstrap-sass (3.2.0.2)
+      sass (~> 3.2)
     builder (3.2.2)
     celluloid (0.16.0)
       timers (~> 4.0.0)
@@ -50,6 +54,7 @@ GEM
       multipart-post (>= 1.2, < 3)
     ffi (1.9.5)
     formatador (0.2.5)
+    github-markdown (0.6.7)
     guard (2.6.1)
       formatador (>= 0.2.4)
       listen (~> 2.7)
@@ -70,6 +75,9 @@ GEM
       thor (>= 0.14, < 2.0)
     json (1.8.1)
     jwt (1.0.0)
+    kaminari (0.16.1)
+      actionpack (>= 3.0.0)
+      activesupport (>= 3.0.0)
     kgio (2.9.2)
     listen (2.7.11)
       celluloid (>= 0.15.2)
@@ -224,12 +232,16 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  autoprefixer-rails
+  bootstrap-sass (~> 3.2.0)
   coffee-rails (~> 4.0.0)
   fabrication
   faker
+  github-markdown
   guard-rspec
   jbuilder (~> 2.0)
   jquery-rails
+  kaminari
   octokit
   omniauth-github (= 1.1.1)
   pg

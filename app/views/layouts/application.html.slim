@@ -5,6 +5,17 @@ html
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
+    meta name="viewport" content="width=device-width, initial-scale=1"
   body
+    header class="navbar navbar-static-top bs-docs-nav" id="top" role="banner"
+      .container
+        .navbar-header
+        = link_to "Simple Commit", root_path, { :class => "navbar-brand" }
+        nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation"
+          ul class="nav navbar-nav navbar-right"
+            li
+              - if current_user
+                = "#{current_user.name}"
+              - else
+                = link_to "Sign in with Github", "/auth/github"
     == yield
-

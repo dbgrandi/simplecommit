@@ -1,11 +1,11 @@
 Rails.application.routes.draw do
-  get 'home/index'
-
   # You can have the root of your site routed with "root"
   root 'home#index'
 
   get "/auth/:provider/callback" => "sessions#create"
   get "/signout" => "sessions#destroy", :as => :signout
+
+  post 'github_hook', to: "github_hook#hook"
 
   #
   # View resque UI

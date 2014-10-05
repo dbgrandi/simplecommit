@@ -1,0 +1,2 @@
+module GithubHookHelper
+end

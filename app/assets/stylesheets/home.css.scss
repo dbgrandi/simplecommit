@@ -1,3 +1,42 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.bs-docs-header {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  font-size: 24px;
+  text-align: left;
+  margin-bottom: 40px;
+  position: relative;
+//  padding: 30px 15px;
+//  color: #cdbfe3;
+  color: #FFFFFF;
+  text-shadow: 0 1px 0 rgba(0,0,0,.1);
+//  background-color: #6f5499;
+  background-color: #FFD026;
+  background-image: linear-gradient(to bottom,#FAC529 0,#FFD026 100%);
+  background-repeat: repeat-x;
+  h1 {
+    margin-right:380px;
+    font-size: 60px;
+    line-height: 1;
+    margin-top: 0;
+    color: #fff;
+  }
+}
+
+.issue {
+  margin-top:40px;
+  margin-bottom:40px;
+  
+  .title {
+    color:#909A9C;
+  }
+  
+  .body {
+    margin-top:20px;
+    margin-left:20px;
+  }
+  
+}

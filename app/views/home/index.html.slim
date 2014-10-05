@@ -1,6 +1,16 @@
-- if current_user
-  h1
-    = "Welcome #{current_user.name}"
-- else
-  h1
-    = link_to "Sign in with Github", "/auth/github"
+div class="bs-docs-header" id="content"
+  div class="container"
+    h1 Find your first contribution
+    p We've curated a list of bugs meant to ease you into the Open Source community.
+
+.container
+  = paginate @issues
+  hr
+  - @issues.each do |issue|
+    .issue
+      h3.title
+        = "#{issue.project.name}: #{issue.title}"
+      h4.body
+        = GitHub::Markdown.render_gfm(issue.body).html_safe
+    hr
+  = paginate @issues
