@@ -3,5 +3,5 @@ class Label < ActiveRecord::Base
   has_many :taggings
   has_many :issues, :through => :taggings
   
-  validates_uniqueness_of :name, scope :project
+  validates_uniqueness_of :name, scope: :project
 end
