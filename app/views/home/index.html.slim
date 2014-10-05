@@ -8,8 +8,9 @@ div class="bs-docs-header" id="content"
   hr
   - @issues.each do |issue|
     .issue
+      .
       h3.title
-        = "#{issue.project.name}: #{issue.title}"
+        = link_to "#{issue.project.name}: #{issue.title}", issue.url
       h4.body
         = GitHub::Markdown.render_gfm(issue.body).html_safe
     hr
