@@ -11,6 +11,7 @@ gem 'sass-rails', '~> 4.0.3'
 gem 'bootstrap-sass', '~> 3.2.0'
 gem 'autoprefixer-rails'
 gem 'github-markdown'
+gem 'gemoji'
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
@@ -65,7 +66,7 @@ group :test do
   # gem 'guard-rails'
   # gem 'guard-resque'
 
-  gem 'database_cleaner'
+  gem 'database_cleaner', '1.3.0'
 
   # mocks and fake data
   gem 'fabrication'
