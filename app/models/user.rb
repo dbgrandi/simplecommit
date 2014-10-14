@@ -1,6 +1,6 @@
 class User < ActiveRecord::Base
-  has_many :collaborators
-  has_many :projects, :through => :collaborators
+  has_many :collaborations
+  has_many :projects, :through => :collaborations
   
   validates_uniqueness_of :uid
   
