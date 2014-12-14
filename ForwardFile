@@ -1,0 +1,12 @@
+# Set the port to forward
+port: 3000
+
+# Set the host/vhost to forward
+host: localhost
+
+# Set a static subdomain prefix to use
+# (e.g. myapp-yourcompany.fwd.wf)
+subdomain_prefix: simplecommit
+
+# Set a CNAME to use
+cname: dev.simplecommit.io
