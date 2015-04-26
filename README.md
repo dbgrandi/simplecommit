@@ -3,6 +3,8 @@ simplecommit
 
 Find easy bugs/issues for people to get involved in the Open Source software community.
 
+[![Coverage Status](https://coveralls.io/repos/dbgrandi/simplecommit/badge.svg)](https://coveralls.io/r/dbgrandi/simplecommit)
+
 ### What is this?
 
 People often ask me how they can get involved in Open Source software. One of the hard parts
