@@ -80,3 +80,5 @@ group :test do
 #  gem 'webmock'          , '~> 1.7.6'
 #  gem 'crack'            , '>=0.1.7'
 end
+
+gem 'coveralls', require: false

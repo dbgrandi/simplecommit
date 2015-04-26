@@ -7,6 +7,10 @@ require 'rspec/autorun'
 
 require 'database_cleaner'
 
+# enable code coverage
+require 'coveralls'
+Coveralls.wear!
+
 DatabaseCleaner.strategy = :truncation
 # then, whenever you need to clean the DB
 DatabaseCleaner.clean
@@ -48,7 +52,6 @@ RSpec.configure do |config|
   end
 
 end
-
 
 # def without_resque_inline(&block)
 #   ri_old = Resque.inline
