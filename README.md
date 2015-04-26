@@ -22,4 +22,4 @@ Color Palette: [http://www.colourlovers.com/palette/3495230/](http://www.colourl
 
 ### License
 
-MIT License, full file in ./LICENSE
+MIT License. See the [LICENSE](https://github.com/dbgrandi/simplecommit/blob/master/LICENSE) file for details.
