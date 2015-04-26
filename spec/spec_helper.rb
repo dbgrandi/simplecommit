@@ -1,15 +1,15 @@
 # This file is copied to spec/ when you run 'rails generate rspec:install'
 ENV["RAILS_ENV"] ||= 'test'
+# enable code coverage
+require 'coveralls'
+Coveralls.wear!
+
 require File.expand_path("../../config/environment", __FILE__)
 require 'minitest/autorun'
 require 'rspec/rails'
 require 'rspec/autorun'
 
 require 'database_cleaner'
-
-# enable code coverage
-require 'coveralls'
-Coveralls.wear!
 
 DatabaseCleaner.strategy = :truncation
 # then, whenever you need to clean the DB
