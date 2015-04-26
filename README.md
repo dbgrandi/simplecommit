@@ -3,6 +3,7 @@ simplecommit
 
 Find easy bugs/issues for people to get involved in the Open Source software community.
 
+[![Travis Status](https://travis-ci.org/dbgrandi/simplecommit.svg?branch=master)](https://travis-ci.org/dbgrandi/simplecommit)
 [![Coverage Status](https://coveralls.io/repos/dbgrandi/simplecommit/badge.svg)](https://coveralls.io/r/dbgrandi/simplecommit)
 
 ### What is this?
