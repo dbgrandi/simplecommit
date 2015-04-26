@@ -12,8 +12,8 @@ Rails.application.routes.draw do
   #
   require 'resque/server'
   Resque::Server.use Rack::Auth::Basic do |username, password|
-    username == 'admin'
-    password == 'hfea29a'
+    username == ENV['RESQUE_USER']
+    password == ENV['RESQUE_PASSWD']
   end
   mount Resque::Server.new, :at => "/resque"
   
